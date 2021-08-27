@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/calendar.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" method="post" action="{{ url_for('get_data')}}">
+            <h1 style="color: black;">Add Event</h1>
+
+            <label for="sub"><b style="color: black;">Subject</b></label>
+            <input type="text" placeholder="E.g.: Strategy Meeting by TCS" name="sub" required>
+
+            <label for="nm"><b style="color: black;">Your Name</b></label>
+            <input type="text" placeholder="E.g.: John Evans" name="nm" required>
+
+            <label for="email"><b style="color: black;">Attendee Email</b></label>
+            <input type="text" placeholder="E.g.: uname@example.com" name="email" required>
+
+            <label for="date"><b style="color: black;">Date</b></label>
+            <input type="text" name="date" id="add-date">
+            <label for="time"><b style="color: black;display: none;" id="label1">Time Slot</b></label>
+            <input type="text" name="time" id='add-time' style="display: none;">
+
+            <button type="button" class="btn_" onclick="show_time_slots()" id="time_slots">Time Slot</button>
+            <button type="submit" class="btn">Add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        <div class="form-popup" id="time_data">
+          <form class="form-container1">
+            <h1 style="color: black;">Select Time Slot</h1>
+            {% for x in data %}
+              <button type="button" class="slot_btn" onclick="save_data(this)">{{x[0]}} - {{x[1]}}</button>
+            {% endfor %}
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename = 'js/calendar1.js') }}"></script>
+  </body>
+</html>

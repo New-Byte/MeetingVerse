@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MeetingVers</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'css/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+  
+</head>
+    <section id="services" class="services section-bg">
+      <div class="container">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><img src="{{ url_for('static', filename = 'img/pp.jpg') }}"></div>
+              <h4 class="title"><a href="">Saumya Agrawal</a></h4>
+              <p class="description">Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.</p>
+
+                <div class="box1">
+                  <h4 class="minititle"><a href="http://127.0.0.1:5000/set_interview">Interview Session</a></h4>
+                  <p class="description">Welcome to <b>30 min </b>interview session by Oyesters Trainings with Saumya Agrawal.</p>
+                </div>
+
+                <div class="box2">
+                  <h4 class="minititle"><a href="http://127.0.0.1:5000/set_discussion">Discussion Session</a></h4>
+                  <p class="description">Welcome to <b>60 min </b>discussion session by Oyesters Trainings with Saumya Agrawal.</p>
+                </div>
+        
+                <div class="box3" onclick="gettime()">
+                  <h4 class="minititle"><a onclick="gettime()" href="#">Custom Session</a></h4>
+                  <p class="description">Arrange meeting with Saumya Agrawal from Oyesters Trainings for <b>custom time limit</b>.</p>
+                </div>
+                <div class="box4">
+                  <div class="select">
+                    <select name="slct" id="slct">
+                      <option value="0">Select Employee</option>
+                      <option value="1">Saumya Agrawal</option>
+                      <option value="2">Prasad Joshi</option>
+                      <option value="3">XYZ Person</option>
+                    </select>
+                  </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="form-popup" id="gettime">
+          <form class="form-container" method="post" action="{{ url_for('set_meeting')}}">
+            <h1 style="color: black;">Enter Duration</h1>
+
+            <input type="text" name="hrmin" placeholder="02 : 30">
+
+            <button type="submit" class="btn">Confirm</button>
+          </form>
+        </div>
+    <script type="text/javascript">
+      function gettime(){
+        document.getElementById("gettime").style.display = "block";
+      }
+    </script>
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename = 'jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'jquery/jquery.easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'jquery/jquery.sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/venobox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/aos.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename = 'assets/js/main.js') }}"></script>
+</body>
+
+</html>

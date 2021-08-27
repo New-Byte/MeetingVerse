@@ -1,0 +1,291 @@
+/**
+* Template Name: Flexor - v2.4.1
+* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #313030;
+}
+
+a {
+  color: #ff5821;
+}
+
+a:hover {
+  color: #ff7e54;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+#hero .container {
+  z-index: 2;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #fff9f7;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  font-family: "Poppins", sans-serif;
+  color: #635551;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f4f2f2;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #635551;
+  content: "/";
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  left: -3%;
+  top: 0%;
+  padding: 50px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 500px;
+  width: 1100px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .box1 {
+  padding: 50px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #E0E8E9;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .box2 {
+  padding: 50px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #E0E8E9;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: -56.9%;
+  left: 35%;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .box3 {
+  padding: 50px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #E0E8E9;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: -113.7%;
+  left: 70%;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .box4 {
+  padding: 50px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  top: -113.7%;
+  left: 35%;
+  background: #fff;
+}
+
+.services .box1:hover,.services .box2:hover,.services .box3:hover {
+  border-top: 5px solid #6F8DF5;
+
+}
+
+.services .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #ff5821;
+}
+
+.services .icon img {
+  width: 77px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 24px;
+}
+
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.services .minititle {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.services .title a {
+  color: #343a40;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+  border: 2px solid #ff5821;
+}
+
+.services .icon-box:hover .icon i {
+  color: #ff5821;
+}
+
+.services .icon-box:hover .title a {
+  color: #ff5821;
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+select {
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  cursor: pointer;
+  border:1px solid black;
+  border-radius:3px;
+}
+.select {
+  position: relative;
+  display: block;
+  width: 15em;
+  height: 3.5em;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: .25em;
+  padding-bottom:10px;
+                  
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 25%;
+  top: 5%;
+  transform: translate(-50,-50);
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .btn:hover{
+  opacity: 1;
+}
