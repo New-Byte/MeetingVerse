@@ -5,8 +5,8 @@ from random import randint
 
 args = sys.argv
 
-CLIENT_ID = '943a666e-3ab7-4d1c-9e24-7c61289594c4'
-SECRET_ID = '5z-Wknt_6-B9dnn6.v.5gaAiW3Dc-jmS84'
+CLIENT_ID = 'clientid'
+SECRET_ID = 'clientsecret'
 
 credentials = (CLIENT_ID, SECRET_ID)
 protocol = MSGraphProtocol() 
